@@ -1,0 +1,21 @@
+{
+    "user_preferences": {
+    	"user_name": "arbutus",
+	"text_entry_languages": "[('xkb', 'us'), ('xkb', 'ru+phonetic_winkeys')]", // Adding Russian phonetic keyboard
+	"panel-show-calendar": true,
+	"panel-show-date": true,
+	"panel-show-day": true,
+	"panel-show-seconds": true,
+	"panel-time-format": "24-hour",
+	"window-placement-mode": "1" //1 = Centre
+    },
+    "theme": {
+	"gtk_theme": "Numix",
+	"icon_theme": "Faenza-Darkest",
+        "show_menu_in_window_title_bar": true
+    },
+    "run_list": [ 
+	"recipe[sb-ubuntu-desktop::packages]",
+        "recipe[sb-ubuntu-desktop::unity]"
+    ]
+}

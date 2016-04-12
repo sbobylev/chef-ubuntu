@@ -1,0 +1,7 @@
+set directory=~/.vim/swapfiles/
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab ts=4 sw=4 ai
+syntax on
+set paste
