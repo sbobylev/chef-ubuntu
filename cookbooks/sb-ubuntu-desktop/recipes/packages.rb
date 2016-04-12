@@ -71,6 +71,9 @@ package 'faenza-icon-theme'
 # Install Numix GTK theme
 package 'numix-gtk-theme'
 
+# Install parcellite
+package 'parcellite'
+
 # Install Chrome and its dependencies
 ['libappindicator1', 'libindicator7'].each do |pkg|
   package pkg
