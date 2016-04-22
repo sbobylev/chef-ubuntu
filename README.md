@@ -1,13 +1,13 @@
 Installs and configures Ubuntu desktop the way I like. The cookbooks and recipes are optiomized for Ubuntu 16.04. Ideally, it should be ran on a newly installed system. Use it on your own risk.
 
-1. Install git
+* Install git
 
 ```sudo apt install git```
 
-2. Clone the repo
+* Clone the repo
 
 ```git clone https://github.com/sbobylev/chef-ubuntu.git```
 
-3. Run the installer as a regular user. You'll be prompted to enter sudoers password during the install process. 
+* Run the installer as a regular user. You'll be prompted to enter sudoers password during the install process. 
 
 ```cd chef-ubuntu && bash install.sh```
