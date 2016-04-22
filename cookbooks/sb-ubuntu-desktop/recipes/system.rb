@@ -31,3 +31,15 @@ execute 'update-grub' do
   command 'update-grub'
   action :nothing
 end
+
+# disable appport
+cookbook_file '/etc/default/apport' do
+  source 'apport'
+  mode '0544'
+  notifies :run, 'execute[stop apport]', :immediately
+end
+
+execute 'stop apport' do
+  command 'service apport stop'
+  action :nothing
+end
