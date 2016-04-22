@@ -3,6 +3,7 @@ Installs and configures Ubuntu desktop the way I like. The cookbooks and recipes
 1. Install git
 
 ```sudo apt install git```
+
 2. Run the installer as a regular user. You'll be prompted to enter sudoers password during the install process. 
 
 ```bash install.sh```
