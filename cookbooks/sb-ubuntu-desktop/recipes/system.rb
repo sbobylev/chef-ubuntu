@@ -22,7 +22,7 @@ end
 
 cookbook_file '/etc/default/grub' do
   source 'grub'
-  mode '0544'
+  mode '0644'
   notifies :run, 'execute[update-grub]', :immediately
   only_if 'grep 0 /sys/block/sda/queue/rotational'
 end
@@ -35,11 +35,21 @@ end
 # disable appport
 cookbook_file '/etc/default/apport' do
   source 'apport'
-  mode '0544'
+  mode '0644'
   notifies :run, 'execute[stop apport]', :immediately
 end
 
 execute 'stop apport' do
   command 'service apport stop'
   action :nothing
+end
+
+# do not sent system info to Canonical
+cookbook_file '/etc/whoopsie' do
+  source 'whoopsie'
+  mode '0644'
+end
+
+service "whoopsie" do
+  action [:restart, :disable, :stop]
 end

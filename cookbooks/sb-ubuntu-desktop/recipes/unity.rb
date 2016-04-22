@@ -15,6 +15,7 @@ panel_show_day = node['user_preferences']['panel-show-day']
 panel_show_seconds = node['user_preferences']['panel-show-seconds']
 panel_time_format = node['user_preferences']['panel-time-format']
 window_placement_mode = node['user_preferences']['window-placement-mode']
+launcher_icons = node['user_preferences']['launcher_icons']
 
 # set gtk theme
 execute 'set_gtk_theme' do
@@ -77,5 +78,11 @@ end
 execute 'set_window_placement_mode' do
   user "#{run_user}"
   command "dconf write /org/compiz/profiles/unity/plugins/place/mode #{window_placement_mode}"
+  action :run
+end
+
+execute 'set_launcher_icons' do
+  user "#{run_user}"
+  command "gsettings set com.canonical.Unity.Launcher favorites \"#{launcher_icons}\""
   action :run
 end
