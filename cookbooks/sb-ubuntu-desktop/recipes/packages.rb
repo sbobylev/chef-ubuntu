@@ -83,14 +83,14 @@ end
 remote_file "#{Chef::Config[:file_cache_path]}/google-chrome-stable_current_amd64.deb" do
   source 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
   action :create
-  not_if {"dpkg -l google-chrome-stable"}
+  not_if 'dpkg -l google-chrome-stable'
 end
 
 # Install Chrome deb package 
 dpkg_package "google-chrome" do
   source "#{Chef::Config[:file_cache_path]}/google-chrome-stable_current_amd64.deb"
   action :install
-  not_if {"dpkg -l google-chrome-stable"}
+  not_if 'dpkg -l google-chrome-stable'
 end
 
 # Install TLP for power management

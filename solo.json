@@ -15,7 +15,8 @@
         "show_menu_in_window_title_bar": true
     },
     "run_list": [ 
-	"recipe[sb-ubuntu-desktop::packages]",
-        "recipe[sb-ubuntu-desktop::unity]"
+	    "recipe[sb-ubuntu-desktop::packages]",
+        "recipe[sb-ubuntu-desktop::unity]",
+        "recipe[sb-ubuntu-desktop::system]"
     ]
 }
