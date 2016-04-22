@@ -18,6 +18,7 @@
     "run_list": [ 
         "recipe[sb-ubuntu-desktop::packages]",
         "recipe[sb-ubuntu-desktop::unity]",
-        "recipe[sb-ubuntu-desktop::system]"
+        "recipe[sb-ubuntu-desktop::system]",
+        "recipe[sb-ubuntu-desktop::user]"
     ]
 }
