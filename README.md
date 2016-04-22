@@ -4,6 +4,10 @@ Installs and configures Ubuntu desktop the way I like. The cookbooks and recipes
 
 ```sudo apt install git```
 
-2. Run the installer as a regular user. You'll be prompted to enter sudoers password during the install process. 
+2. Clone the repo
 
-```bash install.sh```
+```git clone https://github.com/sbobylev/chef-ubuntu.git```
+
+3. Run the installer as a regular user. You'll be prompted to enter sudoers password during the install process. 
+
+```cd chef-ubuntu && bash install.sh```
