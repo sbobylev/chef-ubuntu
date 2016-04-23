@@ -49,7 +49,7 @@ package 'docker.io'
 # Add current user to the docker group
 group 'docker' do
   action :modify
-  members #{user_name}
+  members "#{user_name}"
   append true
 end
 
