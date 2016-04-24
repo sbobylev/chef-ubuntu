@@ -1,4 +1,4 @@
-Installs and configures Ubuntu desktop the way I like. The cookbooks and recipes are optiomized for Ubuntu 16.04. Ideally, it should be ran on a newly installed system. Use it on your own risk.
+The install.sh script configures Ubuntu desktop the way I like. The cookbooks and recipes are optimized for Ubuntu 16.04. Ideally, it should be ran on a newly installed system. Use it on your own risk.
 
 * Install git
 
