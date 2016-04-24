@@ -7,6 +7,7 @@
 # enable trim if / is mounted on ssd
 mount '/' do
   fstype   'ext4'
+  # the device is hardcoded for now
   device   '/dev/mapper/ubuntu--vg-root'
   options  'errors=remount-ro discard noatime'
   action   [:enable]
