@@ -23,23 +23,6 @@ end
 # Install vim
 package 'vim'
 
-# Configure vim
-cookbook_file "/home/#{user_name}/.vimrc" do
-  source 'vimrc'
-  owner "#{user_name}"
-  group "#{user_name}"
-  mode '0755'
-  action :create
-end
-
-# Create vim swap file directory
-directory "/home/#{user_name}/.vim/swapfiles/" do
-  action :create
-  recursive true
-  owner "#{user_name}"
-  group "#{user_name}"
-end
-
 # Install Git
 package 'git'
 
