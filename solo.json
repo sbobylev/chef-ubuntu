@@ -7,6 +7,7 @@
         "panel-show-day": true,
         "panel-show-seconds": true,
         "panel-time-format": "24-hour",
+        "battery-icon-policy": "charge",
         "window-placement-mode": "1", //1 = Centre
         "launcher_icons": "['application://google-chrome.desktop', 'application://gnome-terminal.desktop', 'unity://running-apps', 'application://org.gnome.Nautilus.desktop', 'unity://expo-icon', 'unity://devices']"
     },
