@@ -14,6 +14,7 @@ panel_show_date = node['user_preferences']['panel-show-date']
 panel_show_day = node['user_preferences']['panel-show-day']
 panel_show_seconds = node['user_preferences']['panel-show-seconds']
 panel_time_format = node['user_preferences']['panel-time-format']
+panel_battery_icon = node['user_preferences']['battery-icon-policy']
 window_placement_mode = node['user_preferences']['window-placement-mode']
 launcher_icons = node['user_preferences']['launcher_icons']
 
@@ -45,44 +46,58 @@ execute 'set_input_languages' do
   action :run
 end
 
+# set calendar display
 execute 'set_calendar_display_option' do
   user "#{run_user}"
   command "gsettings set com.canonical.indicator.datetime show-calendar #{panel_show_calendar}"
   action :run
 end
 
+# set date display
 execute 'set_date_display_option' do
   user "#{run_user}"
   command "gsettings set com.canonical.indicator.datetime show-date #{panel_show_date}"
   action :run
 end
 
+# set day display
 execute 'set_day_display_option' do
   user "#{run_user}"
   command "gsettings set com.canonical.indicator.datetime show-day #{panel_show_day}"
   action :run
 end
 
+# set second display
 execute 'set_second_display_option' do
   user "#{run_user}"
   command "gsettings set com.canonical.indicator.datetime show-seconds #{panel_show_seconds}"
   action :run
 end
 
+# set time format
 execute 'set_time_format_display_option' do
   user "#{run_user}"
   command "gsettings set com.canonical.indicator.datetime time-format #{panel_time_format}"
   action :run
 end
 
+# set window placement
 execute 'set_window_placement_mode' do
   user "#{run_user}"
   command "dconf write /org/compiz/profiles/unity/plugins/place/mode #{window_placement_mode}"
   action :run
 end
 
+# set default icons
 execute 'set_launcher_icons' do
   user "#{run_user}"
   command "gsettings set com.canonical.Unity.Launcher favorites \"#{launcher_icons}\""
+  action :run
+end
+
+# set battery style
+execute 'set_battery_icon_style' do
+  user "#{run_user}"
+  command "gsettings set com.canonical.indicator.power icon-policy #{panel_battery_icon}"
   action :run
 end
