@@ -1,6 +1,6 @@
 {
     "user_preferences": {
-    	"user_name": "arbutus",
+    	"user_name": "CHANGEME",
         "text_entry_languages": "[('xkb', 'us'), ('xkb', 'ru+phonetic_winkeys')]", // Adding Russian phonetic keyboard
         "panel-show-calendar": true,
         "panel-show-date": true,
