@@ -25,18 +25,18 @@ cookbook_file "/home/#{run_user}/.zshrc" do
 end
 
 # Configure vim
-cookbook_file "/home/#{user_name}/.vimrc" do
+cookbook_file "/home/#{run_user}/.vimrc" do
   source 'vimrc'
-  owner "#{user_name}"
-  group "#{user_name}"
+  owner "#{run_user}"
+  group "#{run_user}"
   mode '0755'
   action :create
 end
 
 # Create vim swap file directory
-directory "/home/#{user_name}/.vim/swapfiles/" do
+directory "/home/#{run_user}/.vim/swapfiles/" do
   action :create
   recursive true
-  owner "#{user_name}"
-  group "#{user_name}"
+  owner "#{run_user}"
+  group "#{run_user}"
 end
