@@ -11,6 +11,7 @@ apt_repository 'noobslab-ubuntu-icons' do
   uri 'http://ppa.launchpad.net/noobslab/icons/ubuntu'
   components ['main']
   distribution node['lsb']['codename']
+  trusted true
 end
 
 # Add noobslab theme repo
@@ -18,6 +19,7 @@ apt_repository 'noobslab-ubuntu-themes' do
   uri 'http://ppa.launchpad.net/noobslab/themes/ubuntu'
   components ['main']
   distribution node['lsb']['codename']
+  trusted true
 end
 
 # Install vim
