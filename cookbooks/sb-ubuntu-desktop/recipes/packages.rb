@@ -38,8 +38,18 @@ group 'docker' do
   append true
 end
 
+# Install docker compose
+package 'docker-compose'
+
 # Install VirtualBox
 package 'virtualbox'
+
+# Add current user to the vboxusers group
+group 'vboxusers' do
+  action :modify
+  members "#{user_name}"
+  append true
+end
 
 # Install Vagrant
 package 'vagrant'
