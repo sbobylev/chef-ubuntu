@@ -57,6 +57,9 @@ package 'vagrant'
 # Install zsh
 package 'zsh'
 
+# Install pip
+package 'python-pip'
+
 # Install Terminus font
 package 'xfonts-terminus'
 
@@ -100,3 +103,5 @@ end
 ['hunspell-ru', 'mythes-ru', 'mueller7-dict', 'firefox-locale-ru', 'language-pack-ru', 'language-pack-gnome-ru'].each do |pkg|
   package pkg
 end
+
+python_pip "awscli"
